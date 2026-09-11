@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Эта строчка при старте Pytest прочитает файл .env
+
 import pytest  # Импортируем pytest для создания фикстур
 import allure  # Импортируем Allure для скриншотов
 from playwright.sync_api import sync_playwright  # Импортируем менеджер контекста Playwright
