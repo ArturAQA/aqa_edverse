@@ -12,6 +12,9 @@ class RegisterPage(BasePage):
         self.password_input = page.locator(RegisterLocators.PASSWORD_INPUT)
         self.password_repeat_input = page.locator(RegisterLocators.PASSWORD_REPEAT_INPUT)
         self.register_button = page.locator(RegisterLocators.REGISTER_BUTTON)
+        self.email_error = page.get_by_role(RegisterLocators.EMAIL_ERROR_ROLE).filter(has_text="Неверная почта")
+        self.password_error = page.get_by_role(RegisterLocators.PASSWORD_ERROR_ROLE).filter(has_text="Пароль должен содержать не менее 8 символов")
+
         
     def register(self, name: str, email: str, password: str):
         """Заполняет форму регистрации и нажимает «Зарегистрироваться»."""

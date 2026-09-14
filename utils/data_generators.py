@@ -16,5 +16,5 @@ def generate_register_page_user():
     return {
         "name": fake.name(),
         "email": fake.email(),
-        "password": fake.password(length=12)
+        "password": fake.password(length=7)
     }

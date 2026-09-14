@@ -26,7 +26,7 @@ def test_register_with_fake_data(page: Page):
         
     with allure.step("Кликаем на кнопку Зарегистрироваться"):
         register_page.register_button.click()
-        page.wait_for_timeout(1000)
+        register_page.password_error.first.wait_for(state="visible")
         
     with allure.step("Проверяем результат"):
         expect(page).to_have_url("https://edversemovie.ru/register")              

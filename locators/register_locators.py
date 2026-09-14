@@ -21,3 +21,9 @@ class RegisterLocators:
     
     # Переход на страницу авторизации
     LOGIN_LINK = ("link", "Войти")
+    
+    # Роли для сообщений об ошибках
+    EMAIL_ERROR_ROLE = "alert"
+    PASSWORD_ERROR_ROLE = "alert"
+
+
